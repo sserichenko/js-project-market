@@ -19,7 +19,9 @@ module.exports = {
   entry: {
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
-    contacts: './src/page-contacts/main.js'
+    adminProducts: './src/page-admin-products/main.js',
+    adminHome: './src/page-admin-home/main.js',
+    categories: './src/page-categories/main.js',
   },
 
   // how to write the compiled files to disk
@@ -111,9 +113,19 @@ module.exports = {
       filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/page-contacts/tmpl.html',
-      chunks: ['contacts'],
-      filename: 'contacts.html'
+      template: './src/page-categories/tmpl.html',
+      chunks: ['categories'],
+      filename: 'categories.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-admin-products/tmpl.html',
+      chunks: ['adminProducts'],
+      filename: 'admin-products.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-admin-home/tmpl.html',
+      chunks: ['adminHome'],
+      filename: 'admin-home.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
