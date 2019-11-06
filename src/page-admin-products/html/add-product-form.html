@@ -1,82 +1,92 @@
-<form action="#" class="new-product">
+<form action="#" class="new-product" id="product-management">
   <div class="add-form-column left-column-form">
-    <div>
-      <label for="wear-type">Укажите вид обуви</label>
-      <select name="wear-type" id="">
-        <option value="">Кросoвки</option>
-        <option value="">Кеды</option>
-        <option value="">Бутсы</option>
+    <div class="form__inner-container">
+      <label for="wear-type">Укажите вид обуви:</label>
+      <select name="wear-type" id="wear-type" class="form-element--designe">
+        <option value="Кросoвки">Кросoвки</option>
+        <option value="Кеды">Кеды</option>
+        <option value="Бутсы">Бутсы</option>
       </select>
     </div>
-    <div>
-      <label for="wear-applicability">Предназначение</label>
-      <select name="wear-applicability" id="">
-        <option value="">Женские</option>
-        <option value="">Мужские</option>
-        <option value="">Унисекс</option>
-        <option value="">Детские</option>
+    <div class="form__inner-container">
+      <label for="wear-applicability">Предназначение:</label>
+      <select name="wear-applicability" id="wear-applicability" class="form-element--designe">
+        <option value="Женские">Женские</option>
+        <option value="Мужские">Мужские</option>
+        <option value="Унисекс">Унисекс</option>
+        <option value="Детские">Детские</option>
       </select>
     </div>
-    <div>
-      <label for="wear-material">Материал</label>
-      <input type="checkbox" name="wear-material" value="Friday"> Кожа
-      <input type="checkbox" name="wear-material" value="Saturday"> Ткань
-      <input type="checkbox" name="wear-material" value="Sunday"> Сетка
+    <div class="form__inner-container" id="wear-material">
+      <label for="wear-material">Материал:</label>
+      <input type="checkbox" name="wear-material" value="Кожа" id="material-leather"> Кожа
+      <input type="checkbox" name="wear-material" value="Ткань" id="material-cloth"> Ткань
+      <input type="checkbox" name="wear-material" value="Сетка" id="material-grid"> Сетка
     </div>
-    <div>
-      <label for="wear-brandName">Производитель</label>
-      <select name="wear-brandName" id="">
-        <option value="">Nike</option>
-        <option value="">Adidas</option>
-        <option value="">Reebock</option>
-        <option value="">Puma</option>
+    <div class="form__inner-container">
+      <label for="wear-brandName">Производитель:</label>
+      <select name="wear-brandName" id="wear-brandName" class="form-element--designe">
+        <option value="Nike">Nike</option>
+        <option value="Adidas">Adidas</option>
+        <option value="Reebock">Reebock</option>
+        <option value="Puma">Puma</option>
       </select>
     </div>
-    <div>
+    <div class="form__inner-container">
       <label for="wear-modelName">Модель</label>
-      <input name="wear-modelName" type="text">
+      <input name="wear-modelName" type="text" class="form-element--designe" id="wear-modelName">
     </div>
-    <div>
-      <label for="wear-size">Размер</label>
-      <select name="wear-size" id="">
-        <option value="">36.0</option>
-        <option value="">36.5</option>
-        <option value="">37.0</option>
-        <option value="">37.5</option>
-        <option value="">38.0</option>
-        <option value="">38.5</option>
-        <option value="">39.0</option>
-        <option value="">39.5</option>
-        <option value="">40.0</option>
-        <option value="">40.5</option>
-        <option value="">41.0</option>
-        <option value="">41.5</option>
-        <option value="">42.0</option>
-        <option value="">42.5</option>
-        <option value="">43.0</option>
-        <option value="">43.5</option>
-        <option value="">44.0</option>
+    <div class="form__inner-container">
+      <label for="wear-size">Размер:</label>
+      <select name="wear-size" id="wear-size" class="form-element--designe">
+        <option value="36.0">36.0</option>
+        <option value="36.5">36.5</option>
+        <option value="37.0">37.0</option>
+        <option value="37.5">37.5</option>
+        <option value="38.0">38.0</option>
+        <option value="38.5">38.5</option>
+        <option value="39.0">39.0</option>
+        <option value="39.5">39.5</option>
+        <option value="40.0">40.0</option>
+        <option value="40.5">40.5</option>
+        <option value="41.0">41.0</option>
+        <option value="41.5">41.5</option>
+        <option value="42.0">42.0</option>
+        <option value="42.5">42.5</option>
+        <option value="43.0">43.0</option>
+        <option value="43.5">43.5</option>
+        <option value="44.0">44.0</option>
       </select>
     </div>
-    <div>
-      <label for="wear-price">Цена товара</label>
-      <input type="text" name="wear-price">
+    <div class="form__inner-container">
+      <label for="wear-price">Цена товара:</label>
+      <input type="text" name="wear-price" id="wear-price" class="form-element--designe">
     </div>
-    <div>
-      <label for="wear-availability">Сколько поступило</label>
-      <input type="text" name="wear-availability">
+    <div class="form__inner-container">
+      <label for="wear-availability">Сколько поступило:</label>
+      <input type="text" name="wear-availability" id="wear-availability" class="form-element--designe">
     </div>
+    <div class="form__inner-container">
+      <label for="wear-popular">Товар популярный?</label>
+      <input type="radio" name="wear-popular" id="wear-popular" class="form-element--designe">
+    </div>
+    <label for="wear-description" id="description-label">Описание товара:</label>
+
   </div>
   <div class="add-form-column right-column-form">
       <div>
-        <label for="wear-image">Добавьте изображение</label>
-        <input name="wear-image" type="file">
+        <label for="wear-image">Добавьте изображение:</label>
+        <input name="wear-image" id="wear-image" type="file">
+        <img src="#" alt="product image" width="400" height="300" id="product-img" >
       </div>
       <div>
-        <label for="wear-description">Описание товара</label>
-        <textarea name="wear-description" id="" cols="30" rows="10"></textarea>
+        <textarea name="wear-description" id="wear-description"></textarea>
       </div>
   </div>
-
-
 </form>
+
+<div class="button-block ">
+  <button type="submit" form="product-management" id="change-button">Добавить</button>
+  <input type="button" onclick="document.getElementById('product-management').reset()" value="Очистить" form="product-management" id="reset-button">
+</div>
+

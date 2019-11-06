@@ -1,16 +1,16 @@
 class Footwear {
   constructor(obj) {
     this.type = obj.type;
-    this.applicability = obj.applicability;
+    this.gender = obj.gender;
     this.material = obj.material;
     this.brandName = obj.brandName;
-    this.modelName = obj.modelName;
+    this.name = obj.modelName;
     this.size = obj.size;
     this.image = obj.image;
     this.description = obj.description;
     this.price = obj.price;
     this.availability = obj.availability;
-    this.views = 0;
+    this.popular = false;
     this.purchases = 0;
   }
 }
@@ -38,12 +38,3 @@ Footwear.prototype.сscriptureProduct = function(quantity) {
     alert('not enough goods in stock!');
   }
 };
-
-const ked = new Footwear({
-  type: 'ked',
-  brandName: 'Nike',
-  size: 42.5,
-  price: 340,
-});
-
-console.log('ked :', ked);
