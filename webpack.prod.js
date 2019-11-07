@@ -22,6 +22,10 @@ module.exports = {
     adminProducts: './src/page-admin-products/main.js',
     adminHome: './src/page-admin-home/main.js',
     categories: './src/page-categories/main.js',
+    newCollection: './src/page-new-collection/main.js',
+    men: './src/page-men/main.js',
+    women: './src/page-women/main.js',
+    kids: './src/page-kids/main.js',
   },
 
   // how to write the compiled files to disk
@@ -126,6 +130,26 @@ module.exports = {
       template: './src/page-admin-home/tmpl.html',
       chunks: ['adminHome'],
       filename: 'admin-home.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-new-collection/tmpl.html',
+      chunks: ['newCollection'],
+      filename: 'new-collection.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-men/tmpl.html',
+      chunks: ['men'],
+      filename: 'men.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-women/tmpl.html',
+      chunks: ['women'],
+      filename: 'women.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-kids/tmpl.html',
+      chunks: ['kids'],
+      filename: 'kids.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

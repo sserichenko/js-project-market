@@ -1,7 +1,35 @@
 @import './typography.scss';
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
 
+<<<<<<< HEAD
 html,
 body {
+=======
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+html, body {
+>>>>>>> dev
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
