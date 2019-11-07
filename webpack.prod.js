@@ -23,7 +23,7 @@ module.exports = {
     adminHome: './src/page-admin-home/main.js',
     categories: './src/page-categories/main.js',
     newCollection: './src/page-new-collection/main.js',
-    men: './src/page-men/main.js',
+    men: './src/page-men/men.js',
     women: './src/page-women/main.js',
     kids: './src/page-kids/main.js',
   },
