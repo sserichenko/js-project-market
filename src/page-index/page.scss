@@ -391,3 +391,142 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.main-collection{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.new-collection {
+  position: relative;
+  margin-bottom: 50px;
+}
+.new-collection__description{
+  position: absolute;
+  left: 640px;
+  top: 300px;
+}
+.new-collection__title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  max-width: 500px;
+}
+.new-collection__paragraph{
+  max-width: 500px;
+}
+.button-box{
+  position: absolute;
+  left: 1100px;
+  top: 400px;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 146px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #82f4d3;
+    right: -140px;
+    bottom: -40px;
+    user-select: none;
+  }
+}
+.view-now{
+  border: none;
+  position: absolute;
+
+  width: 146px;
+  height: 48px;
+  background-color: #82f4d3;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.collection-title{
+margin-bottom: 70px;
+}
+.features-list{
+  justify-content: space-around;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.features-list-item{
+  position: relative;
+  margin-bottom: 15px;
+
+}
+.features-list-inner{
+    position: absolute;
+    width: 230px;
+    height: 280px;
+    left: 50%;
+    top:36%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: rgba(130, 244, 211, .6);
+
+}
+.features-list-item:hover .features-list-inner{
+  display: block;
+}
+.features-list-item:hover .calash{
+  display: block;
+
+}
+.calash {
+  position: absolute;
+  display: none;
+  width: 168px;
+  height: 50px;
+  left: 35px;
+  top: 110px;
+  border: 1px solid teal;
+  color: #000000;
+  background: none;
+}
+
+.calash p {
+  font-size: 14px;
+  display: inline-block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.features-list-item img {
+  margin-bottom: 60px;
+  width: 255px;
+  height: 322px;
+  object-fit: cover;
+}
+.goods-box{
+  display: flex;
+  justify-content: space-between;
+    margin-bottom: 26px;
+}
+.product-name{
+  display: inline-block;
+  width: 110px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.goods-description{
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.price{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+//CHART MODAL CSS//
+
