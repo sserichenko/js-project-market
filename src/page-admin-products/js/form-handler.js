@@ -44,6 +44,6 @@ API.getProducts();
 API.getProduct('5dc414260765883178486d79');
 API.getPopular();
 
-API.delProduct('5dc3d8563c96da35b8104f64');
+API.delProduct('5dc3cc4a92a65308ab3ab8f7');
 
 // console.dir(productForm.querySelector('#wear-image'));
