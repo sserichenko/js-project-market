@@ -52,15 +52,36 @@ const picArr = [
       "image": "https://s.mediasole.ru/cache/content/data/images/1393/1393226/original.jpg",
       "price": 150,
 
-    }
-  ]
+    },
 
+
+  ]
 
   const markDishes = list(picArr);
   console.log('markDishes', list());
 
   featuresList.insertAdjacentHTML('afterbegin', markDishes);
 
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   console.log('DOMContentLoaded', 'page-about');
-  // });
+const addToCart = document.querySelector('.calash');
+const listListener = document.querySelector('.features-list');
+listListener.addEventListener('click', addingToCart);
+
+const chart = [];
+
+  console.log('chart', chart);
+function addingToCart(e){
+
+  if(e.target.nodeName === 'BUTTON'){
+    const el = picArr.find(el => el.id === e.target.dataset.id)
+    console.log('el', el);
+  if(chart.includes(el)){
+   return
+  } else {
+     chart.push(el);
+    console.log('chart', chart);
+    localStorage.setItem('goods', chart)
+  }
+  }
+};
+
+
