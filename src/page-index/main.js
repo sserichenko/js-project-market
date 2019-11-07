@@ -1,20 +1,20 @@
-import '../scss/main.scss';
-import './page.scss'
+import "../scss/main.scss";
+import "./page.scss";
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded', 'page-index')
-})
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOMContentLoaded", "page-index");
+});
 
 class Foo {
-  constructor () {
-    this.value = 'foobar'
+  constructor() {
+    this.value = "foobar";
   }
-  static instance () {
-    return new Foo()
+  static instance() {
+    return new Foo();
   }
-  getValue () {
-    return this.value
+  getValue() {
+    return this.value;
   }
 }
 
-console.log(Foo.instance().getValue())
+console.log(Foo.instance().getValue());
