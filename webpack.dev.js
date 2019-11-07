@@ -16,6 +16,10 @@ module.exports = {
     adminProducts: './src/page-admin-products/main.js',
     adminHome: './src/page-admin-home/main.js',
     categories: './src/page-categories/main.js',
+    newCollection: './src/page-new-collection/main.js',
+    men: './src/page-men/main.js',
+    women: './src/page-women/main.js',
+    kids: './src/page-kids/main.js',
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -34,6 +38,10 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env']
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.scss$/i,
@@ -119,6 +127,26 @@ module.exports = {
       template: './src/page-admin-home/tmpl.html',
       chunks: ['adminHome'],
       filename: 'admin-home.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-new-collection/tmpl.html',
+      chunks: ['newCollection'],
+      filename: 'new-collection.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-men/tmpl.html',
+      chunks: ['men'],
+      filename: 'men.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-women/tmpl.html',
+      chunks: ['women'],
+      filename: 'women.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/page-kids/tmpl.html',
+      chunks: ['kids'],
+      filename: 'kids.html'
     }),
     new WebpackBar()
   ]
