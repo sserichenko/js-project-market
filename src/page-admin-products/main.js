@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-contacts');
 });
 
+import '../scss/main.scss';
+import './page.scss';
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOMContentLoaded', 'page-contacts');
+});
+
 
 // Get the modal
 const modal = document.getElementById("myModal");
@@ -18,55 +25,14 @@ const cancelButton = document.querySelector(".cancelbtn");
 const input = document.querySelector("#userName");
 const output = document.querySelector("#userPassword");
 const formContent = document.querySelector('.container__form')
-const login = document.querySelector('#register')
-const register = document.querySelector('userRegister')
+const buttonLogin = document.querySelector('#userRegister')
+const registerButton = document.getElementById("register")
 let userRegistration = {};
 console.dir(formContent)
 
 //  const loginBtn = formContent.querySelector('#userLogin');
 
-console.log(login);
-
-input.addEventListener('input', e => {
-  event.preventDefault();
-  userRegistration.userName = e.target.value
-})
-
-output.addEventListener('input', e => {
-  event.preventDefault();
-  userRegistration.userPassword = e.target.value
-  if (input.lengths <= 6){
-    alert ('enter 7')
-    return false;
-  }
-})
-console.log(userRegistration);
-
-
-register.addEventListener('click', e => {
-
-})
-// submit (register)
-// fetch('http://localhost:3000/api/auth/signup', {
-//     method: 'post',
-//     headers: {
-//         'content-type': 'application/json',
-//     },
-//     body: JSON.stringify({ email: 'test@mail.com', password: 'qwer4321' })
-// }).then(res => res.json()).then(data => console.log('data', data));
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(login);
 
 
 // When the user clicks on the button, open the modal
@@ -85,12 +51,51 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-cancelButton.onclick = function(event) {
+// When the user clicks cencel modal form close
+  cancelButton.onclick = function(event) {
   if (event.target === cancelButton) {
     modal.style.display = "none";
   }
 }
+
+// input.addEventListener('input', e => {
+//   // event.preventDefault();
+//   userRegistration.email = e.target.value
+// })
+
+// output.addEventListener('input', e => {
+//   // event.preventDefault();
+//   if (output.lengths <= 6){
+//     alert ('enter 7')
+
+
+//   }else {userRegistration.password = e.target.value}
+// })
+// console.log(userRegistration);
+
+
+buttonLogin.addEventListener('click', e => {
+  event.preventDefault();
+  console.log(userRegistration);
+  input.userRegistration.email = e.target.value
+  output.userRegistration.password = e.target.value
+
+  fetch('http://localhost:3000/api/auth/signup', {
+    method: 'post',
+    headers: {
+        'content-type': 'application/json',
+        'Authorization': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYzJhNjMyOWQ0ZDU2ODM5MDJlM2E2ZCIsImlhdCI6MTU3MzA0ODQzOCwiZXhwIjoxNTczNjUzMjM4fQ.oIVNWXUo7GwiDt2o1xXf4r1wqffjEUyBerjZF6b_F-k",
+    },
+    body: JSON.stringify(userRegistration)
+}).then(res => res.json()).then(data => console.log('data', data)
+)
+
+
+      modal.style.display = "none";
+      output.value = '';
+      input.value = '';
+
+})
 
 
 
