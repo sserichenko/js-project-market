@@ -47,6 +47,10 @@ img {
   width: 470px;
   height: 507px;
 }
+.catalog__img {
+  max-width: 470px;
+  border: solid 4px #ffffff;
+}
 
 .catalog__overlay {
   position: absolute;
@@ -54,17 +58,13 @@ img {
   height: 507px;
   top: 70px;
   left: -180px;
-  transform: translate(-20px, -20px);
+  transform: translate(-50px, -50px);
   background-image: linear-gradient( 114deg, rgb(101,224,188) 0%, rgb(201,249,235) 100%);
   opacity: 0.722;
   z-index: 0;
 }
 
 
-.catalog__img {
-  max-width: 470px;
-  border: solid 4px #ffffff;
-}
 
 .catalog__h2 {
   font-size: 45px;
@@ -90,6 +90,8 @@ img {
   border: none;
   color: #1a2925;
   background-color: #82f4d3;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 

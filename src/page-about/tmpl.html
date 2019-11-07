@@ -13,9 +13,11 @@
   <link rel="stylesheet" href="../../node_modules/slick-carousel/slick/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="page.scss"/>
 </head>
-  <body>
-    <%= require('html-loader!../partials/nav.html') %>
-  <section class="catalog">
+<body>
+
+  <%= require('html-loader!../partials/nav.html') %>
+
+  <section class="catalog" id="woman">
       <div class="catalog__block">
         <div class="catalog__column">
           <h2 class="catalog__h2">Woman collections</h2>
@@ -28,7 +30,7 @@
         </div>
       </div>
     </section>
-  <section class="catalog">
+  <section class="catalog" id="man">
       <div class="catalog__block">
         <div class="catalog__column">
           <h2 class="catalog__h2">Man collections</h2>
@@ -41,7 +43,7 @@
         </div>
       </div>
     </section>
-  <section class="catalog">
+  <section class="catalog" id="kids">
       <div class="catalog__block">
         <div class="catalog__column">
           <h2 class="catalog__h2">Kids collections</h2>
@@ -86,5 +88,4 @@
 
   <%= require('html-loader!../partials/footer.html') %>
 </body>
-
 </html>
