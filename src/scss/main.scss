@@ -8,10 +8,12 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
-html,
-body {
-=======
+html, body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 img {
   display: block;
   max-width: 100%;
@@ -23,35 +25,6 @@ img {
   display: table;
   clear: both;
 }
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-html, body {
->>>>>>> dev
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -71,6 +44,8 @@ img {
 
 .site__logo {
   display: block;
+  width: 200px;
+  height: 28px;
 }
 
 .site-navigation {
