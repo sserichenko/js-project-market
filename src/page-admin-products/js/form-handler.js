@@ -1,8 +1,7 @@
 import './product-ex';
-import addNewProduct from './add-product';
+import API from './api';
 
 const productForm = document.querySelector('form.new-product');
-
 const materialBlock = [...productForm.querySelector('#wear-material').children];
 
 function materialSelection(arr) {
@@ -24,7 +23,7 @@ productForm[13].addEventListener('click', e => {
     brandName: productForm.querySelector('#wear-brandName').value,
     name: productForm.querySelector('#wear-modelName').value,
     size: +productForm.querySelector('#wear-size').value,
-    image: productForm.querySelector('#wear-image').value,
+    image: productForm.querySelector('#wear-image').files[0],
     description: productForm.querySelector('#wear-description').value,
     price: +productForm.querySelector('#wear-price').value,
     availability: +productForm.querySelector('#wear-availability').value,
@@ -32,6 +31,19 @@ productForm[13].addEventListener('click', e => {
     purchases: 0,
   };
   document.getElementById('product-management').reset();
-  addNewProduct(product);
-  console.log('product :', product);
+
+  const formData = new FormData();
+  Object.keys(product).forEach(key => {
+    formData.append(key, product[key]);
+  });
+  API.addNewProduct(formData);
+  console.log('formData :', formData);
 });
+
+API.getProducts();
+API.getProduct('5dc414260765883178486d79');
+API.getPopular();
+
+API.delProduct('5dc3d8563c96da35b8104f64');
+
+// console.dir(productForm.querySelector('#wear-image'));
