@@ -1,1 +1,166 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.catalog {
+  max-width: 1600px;
+  height: auto;
+  margin: 0;
+  background-color: #fdfdfd;
+}
+
+.catalog__block {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 132px 0 204px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__column {
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  padding: 154px 0 74px 0;
+}
+
+.catalog__image {
+  max-width: 470px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.catalog__img {
+  position: absolute;
+  left: -250px;
+  z-index: 50;
+  width: 470px;
+  height: 507px;
+}
+
+.catalog__overlay {
+  position: absolute;
+  width: 470px;
+  height: 507px;
+  top: 70px;
+  left: -180px;
+  transform: translate(-20px, -20px);
+  background-image: linear-gradient( 114deg, rgb(101,224,188) 0%, rgb(201,249,235) 100%);
+  opacity: 0.722;
+  z-index: 0;
+}
+
+
+.catalog__img {
+  max-width: 470px;
+  border: solid 4px #ffffff;
+}
+
+.catalog__h2 {
+  font-size: 45px;
+  line-height: 54px;
+  margin-bottom: 46px;
+  color: #000000;
+  font-family: serif;
+}
+
+.catalog__p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #888888;
+  margin-bottom: 60px;
+}
+
+.catalog__button {
+  width: 145px;
+  height: 47px;
+  content: '';
+  font-size: 15px;
+  line-height: 30px;
+  border: none;
+  color: #1a2925;
+  background-color: #82f4d3;
+}
+
+
+.slick-list.draggable {
+  height: auto;
+}
+
+.slick-arrow {
+  z-index: 3;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -15px;
+}
+
+.slick-prev.slick-arrow::before {
+  color: #51cda9;
+  font-size: 50px;
+}
+
+.slick-next.slick-arrow::before {
+  color: #51cda9;
+  font-size: 50px;
+}
+
+.slider__bottom {
+  max-width: 1600px;
+  margin: 0;
+  padding: 100px 165px;
+  background-color: #f8f8f8;
+}
+
+.slider__bottom--center {
+  max-width: 1170px;
+  // height: 473px;
+  margin: 0 auto;
+}
+
+.slider__bottom--h2 {
+  font-size: 45px;
+  line-height: 54px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.slider__bottom--p1 {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.slider__bottom--p2 {
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider__bottom--p3 {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #51cda9;
+}
+
+
+
+
+
