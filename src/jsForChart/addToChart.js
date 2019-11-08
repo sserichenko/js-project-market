@@ -27,34 +27,43 @@ const cartRef = document.querySelector(".modal-cart");
 const buttonCart = document.querySelector(".button-cart");
 const modalCartClose = document.querySelector(".modal-cart__close");
 const cartUl = document.querySelector(".cart-list");
+const nav = document.querySelector('.nav');
 
-buttonCart.addEventListener("click", () => {
+
+nav.addEventListener("click", (ev) => {
+  if(ev.target.nodeName === 'BUTTON' || ev.target.dataset.action === "openChart" ||
+ ev.target.dataset.action === "openChartSVG"){
   cartRef.classList.add("show");
   renderingGallery(chart);
+  }
 });
+
 modalCartClose.addEventListener("click", () => {
   cartRef.classList.remove("show");
 });
 
-// if(chart.length > 0) {
-//   const markup = chart.reduce((acc, el) =>{
-//     return `<li class="cart-item">
-//     <div class="modal-item">
-//     <img class="cart-list__img" src="${el.image}">
-//     <span class="cart-list__name">${el.name}</span>
-//     <span class="cart-list__price">$${el.price}</span>
-//     </div>
-//     </li>`
-//   }, '');
+cartRef.addEventListener('click', (e)=>{
+  if(e.target.nodeName === 'BUTTON' && e.target.dataset.action === "del"){
+    const elIndex = chart.find((el, index) => {
+      if (el.id === e.target.id) {
+        return index
+      }
+    })
+    console.log('chart :', chart);
+    chart.splice(elIndex, 1);
+    console.log('chart :', chart);
+    localStorage.setItem("good", JSON.stringify(chart));
+    renderingGallery(chart);
 
-//   cartRef.querySelector('.cart-list').innerHTML = markup;
-// }
-//=================================
+  }
+
+})
+
 
 const renderingGallery = () => {
+  let markup = "";
   if (chart.length > 0) {
     cartUl.innerHTML = "";
-    let markup = "";
     chart.forEach(el => {
       markup += `
         <li class="cart-item">
@@ -62,12 +71,12 @@ const renderingGallery = () => {
             <img class="cart-list__img" src="${el.image}">
              <span class="cart-list__name">${el.name}</span>
              <span class="cart-list__price">$${el.price}</span>
-             <button class=".del-chart-item"x</button>
+             <button id="${el.id}" data-action="del" class="del-chart-item">x</button>
           </div>
         </li>
         `;
     });
-    cartUl.innerHTML = markup;
   }
+  cartUl.innerHTML = markup;
 };
 renderingGallery(chart);
