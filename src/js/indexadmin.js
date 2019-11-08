@@ -1,9 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded', 'page-contacts');
-});
-
-
 // Get the modal
 const modal = document.getElementById("myModal");
 
