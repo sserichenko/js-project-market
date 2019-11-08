@@ -11,15 +11,22 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
-
-  <%= require('html-loader!../partials/nav.html') %>
-
-  <h1 class="page-title">
-    <i class="fas fa-user-secret"></i>
-    WOMEN
-  </h1>
-  <img src="./img/intro.png" alt="">
-
+    <%= require('html-loader!../partials/nav.html') %>
+  <div class="block2">
+    <ul class="img_list2"></ul>
+    <div id="myModal" class="modal2">
+      <div class="modal-content2">
+        <span class="close2">&times;</span>
+        <div class="card2">
+          <img class="img_modal2">
+          <h1 class="product2"></h1>
+          <p class="price2"></p>
+          <p class="description2"></p>
+          <p><button class="btn_card2">Add to Cart</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
   <%= require('html-loader!../partials/footer.html') %>
-</body>
+  </body>
 </html>
