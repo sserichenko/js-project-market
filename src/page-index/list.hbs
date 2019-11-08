@@ -1,15 +1,15 @@
- {{#each this}}
- <li class="features-list-item">
-    <div class="features-list-inner">
-                <button class="calash" data-id={{id}}>
-                    Add to cart
-                </button>
-    </div>
-    <img src={{image}} width="255" height="322" alt="blue-tshirt">
-      <div class="goods-box">
-      <h3 class="product-name">{{name}}</h3>
-      <span class="goods-description">...</span>
-      </div>
-    <p class="price">${{price}}</p>
+{{#each this}}
+<li class="features-list-item">
+  <div class="features-list-inner">
+    <button class="calash" data-id={{id}}>
+      Add to cart
+    </button>
+  </div>
+  <img src={{image}} width="255" height="322" alt="blue-tshirt">
+  <div class="goods-box">
+    <h3 class="product-name">{{name}}</h3>
+    <span class="goods-description">...</span>
+  </div>
+  <p class="price">${{price}}</p>
 </li>
- {{/each}}
+{{/each}}
