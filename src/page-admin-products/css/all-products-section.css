@@ -1,0 +1,25 @@
+.all-products-section {
+  width: 1600px;
+}
+
+.all-products-section-title {
+  /* margin: 0px auto; */
+  text-align: center;
+}
+
+.all-products-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-beetwen;
+}
+
+.one-product-item {
+  display: block;
+  width: 300px;
+}
+
+.one-product-image {
+  display: block;
+  width: 300px;
+}
