@@ -145,10 +145,10 @@ const picArr = [
 
   ]
 
-  const markDishes = list(picArr);
+  const renderShoes = list(picArr);
   console.log('markDishes', list());
 
-  featuresList.insertAdjacentHTML('afterbegin', markDishes);
+  featuresList.insertAdjacentHTML('afterbegin', renderShoes);
 
 const addToCart = document.querySelector('.calash');
 const listListener = document.querySelector('.features-list');
@@ -156,24 +156,6 @@ listListener.addEventListener('click', (e) => addingToCart(e, picArr));
 
 console.dir(addToCart)
 
-
-// const chart = [];
-
-//   console.log('chart', chart);
-// function addingToCart(e){
-
-//   if(e.target.nodeName === 'BUTTON'){
-//     const el = picArr.find(el => el.id === e.target.dataset.id)
-//     console.log('el', el);
-//   if(chart.includes(el)){
-//    return
-//   } else {
-//      chart.push(el);
-//     console.log('chart', chart);
-//     localStorage.setItem('goods', chart)
-//   }
-//   }
-// };
 
 
 

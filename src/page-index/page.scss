@@ -195,7 +195,7 @@ body {
 #wrapper {
 
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 90%;
   bottom: 0;
   right: 0;
@@ -203,7 +203,7 @@ body {
   z-index: 50;
 
   #share {
-    background: rgba(0, 0, 0, 0.5);
+    // background: rgba(0, 0, 0, 0.5);
     position: relative;
     margin: 0 auto;
     width: 100px;
@@ -412,12 +412,14 @@ body {
   top: 300px;
 }
 .new-collection__title{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Times New Roman', serif;
   font-weight: 600;
   max-width: 500px;
 }
 .new-collection__paragraph{
   max-width: 500px;
+  font-family: 'Arial', serif;
+  font-weight: 400;
 }
 .button-box{
   position: absolute;

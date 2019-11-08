@@ -17,8 +17,11 @@
   transform: translateX(-500px);
 }
 .modal-cart__title{
+  display: inline-block;
+  width: 200px;
   font-family: 'Montserat', serif;
   color: teal;
+  font-size: 18px;
   text-transform: uppercase;
 }
 .cart-list{
@@ -53,6 +56,7 @@
   font-size: 20px;
 }
 .modal-cart__close{
+  vertical-align: middle;
   border: none;
   border-radius: 4px;
   background-color: lightsalmon;
@@ -62,4 +66,11 @@
   font-size: 14px;
   width: 60px;
   height: 30px;
+  margin-bottom: 3px;
+}
+.del-chart-item{
+ width: 20px;
+ height: 20px;
+ font-size: 10px;
+ color: red;
 }
