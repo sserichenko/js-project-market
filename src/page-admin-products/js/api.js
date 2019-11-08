@@ -11,9 +11,7 @@ const API = {
           'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYzJhNjMyOWQ0ZDU2ODM5MDJlM2E2ZCIsImlhdCI6MTU3MzA0ODQzOCwiZXhwIjoxNTczNjUzMjM4fQ.oIVNWXUo7GwiDt2o1xXf4r1wqffjEUyBerjZF6b_F-k',
       },
       body: obj,
-    })
-      .then(res => res.json())
-      .then(data => console.log('data', data));
+    }).then(res => res.json());
   },
 
   getProducts() {
@@ -26,7 +24,6 @@ const API = {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('data.products', data.products);
         return data.products;
       });
   },
@@ -41,16 +38,21 @@ const API = {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('product', data.product);
         return data.product;
       });
   },
 
   getPopular() {
     this.getProducts().then(products => {
-      const popularProduct = products.filter(item => item.popular);
-      console.log('popularProduct', popularProduct);
-      return popularProduct;
+      const popularProducts = products.filter(item => item.popular);
+      return popularProducts;
+    });
+  },
+
+  getGenderProducts(gender) {
+    this.getProducts().then(products => {
+      const genderProducts = products.filter(item => item.gender === gender);
+      return genderProducts;
     });
   },
 
@@ -64,7 +66,6 @@ const API = {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('data', data);
         return data.products;
       });
   },

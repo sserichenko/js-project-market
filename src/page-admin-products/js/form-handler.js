@@ -44,6 +44,8 @@ API.getProducts();
 API.getProduct('5dc414260765883178486d79');
 API.getPopular();
 
-API.delProduct('5dc3cc4a92a65308ab3ab8f7');
+API.delProduct('5dc42ce1fa38424289fa77e6');
+
+API.getGenderProducts('Женские');
 
 // console.dir(productForm.querySelector('#wear-image'));
