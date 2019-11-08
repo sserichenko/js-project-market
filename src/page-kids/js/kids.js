@@ -14,7 +14,10 @@ const imgModal = document.querySelector(".img_modal2");
 //   ul.insertAdjacentHTML("afterbegin", abc);
 // });
 
+
+console.log('hello')
 API.getProducts().then(prod => {
+  console.log('prod', prod)
   const abc = kids(prod);
   ul.insertAdjacentHTML("afterbegin", abc);
 }); //потом закоментить!

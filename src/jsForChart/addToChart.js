@@ -28,6 +28,7 @@ const buttonCart = document.querySelector(".button-cart");
 const modalCartClose = document.querySelector(".modal-cart__close");
 const cartUl = document.querySelector(".cart-list");
 const nav = document.querySelector('.nav');
+const body = document.querySelector('body');
 
 
 nav.addEventListener("click", (ev) => {
@@ -37,6 +38,10 @@ nav.addEventListener("click", (ev) => {
   renderingGallery(chart);
   }
 });
+
+body.addEventListener("click", (ev) => {
+renderingGallery(chart);
+})
 
 modalCartClose.addEventListener("click", () => {
   cartRef.classList.remove("show");
