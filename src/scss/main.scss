@@ -14,6 +14,7 @@ html,
 body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 img {
@@ -41,8 +42,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 44px;
-  padding-bottom: 44px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .site__logo {
@@ -79,7 +80,7 @@ img {
 .site-navigation__link::after {
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -6px;
   display: none;
   margin: 0 auto;
   content: "";
@@ -111,12 +112,14 @@ img {
 }
 
 .footer {
-  padding-top: 60px;
+  padding-top: 16px;
+  padding-bottom: 26px;
   background-color: #222222;
 }
 
 .footer-information {
-  padding-bottom: 60px;
+  padding-top: 16px;
+  padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -126,7 +129,7 @@ img {
 }
 
 .footer-about__title {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 16px;
   line-height: 19px;
   color: #82f4d3;
@@ -153,7 +156,7 @@ img {
 }
 
 .footer-contact__title {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 16px;
   line-height: 19px;
   color: #82f4d3;
@@ -162,7 +165,7 @@ img {
 }
 
 .footer-contact__address {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 17px;
   color: #b6b6b6;
@@ -170,7 +173,7 @@ img {
 }
 
 .footer-contact__phones {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 17px;
   color: #b6b6b6;
@@ -178,7 +181,7 @@ img {
 }
 
 .footer-contact__time {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 17px;
   color: #b6b6b6;
@@ -198,7 +201,7 @@ img {
 }
 
 .footer-form__title {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 16px;
   line-height: 19px;
   color: #82f4d3;
@@ -230,6 +233,9 @@ img {
   font-size: 10px;
   line-height: 12px;
   font-weight: 500;
+}
+
+.form__input::placeholder {
   text-transform: uppercase;
 }
 
@@ -260,13 +266,13 @@ img {
 
 .footer-nav {
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   border-top: 3px solid #b6b6b6;
 }
 
 .footer-navigation {
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
   display: flex;
   justify-content: space-between;
   width: 600px;
@@ -302,7 +308,7 @@ img {
 }
 
 .footer-nav__title {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   color: #b6b6b6;
   font-weight: 600;
