@@ -6,6 +6,8 @@ const featuresList = document.querySelector('.features-list');
 import '../scss/main.scss';
 import './page.scss';
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded", "page-index");
 });
