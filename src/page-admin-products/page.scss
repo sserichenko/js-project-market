@@ -1,1 +1,65 @@
+#product-img {
+  background-color: #fff;
+  display: block;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #000000;
+  border-bottom: 0px;
 
+}
+
+.new-product {
+  color: #ffffff;
+  background-color: #82f4d3;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+}
+
+.right-column-form {
+  width: 490px;
+}
+
+.left-column-form {
+  width: 300px;
+}
+
+.form__inner-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.form-element--designe,
+#change-button,
+#reset-button{
+  display: block;
+  width: 100px;
+  height: 30px;
+  border: 2px #000000;
+  outline: 0px solid;
+  cursor: pointer;
+}
+
+.button-block {
+  width: 240px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#description-label {
+line-height: 100px;
+}
+
+#wear-description {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #000000;
+  outline: 0px;
+  padding: 0px;
+  resize: none;
+}
