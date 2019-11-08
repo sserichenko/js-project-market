@@ -1,12 +1,12 @@
 {{#each this}}
 <li class="gallery__item2">
   <img
-  src={{src}}
-  id={{id}}
-  data-img_modal="{{preview}}"
-  data-product="{{product}}"
+  src={{image}}
+  id={{_id}}
+  data-img_modal="{{type}}"
+  data-product="{{brandName}}"
   data-description="{{description}}"
-  data-price="{{price}}"
+  data-price="${{price}}"
 >
 </li>
 {{/each}}
