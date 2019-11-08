@@ -49,11 +49,13 @@ const API = {
     });
   },
 
-  getGenderProducts(gender) {
-    this.getProducts().then(products => {
-      const genderProducts = products.filter(item => item.gender === gender);
-      return genderProducts;
-    });
+getGenderProducts(gender) {
+    return this.getProducts().then(products => {
+       return products.filter(item => {
+        return item.gender === gender});
+      });
+
+
   },
 
   delProduct(prodId) {
