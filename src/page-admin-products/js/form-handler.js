@@ -3,6 +3,20 @@ import API from './api';
 
 const productForm = document.querySelector('form.new-product');
 const materialBlock = [...productForm.querySelector('#wear-material').children];
+const addImg = document.querySelector('#wear-image');
+const viewImg = document.querySelector('#product-img');
+
+console.dir(addImg);
+
+// addImg.addEventListener('', e => {
+//   console.log('add a photo');
+//   viewImg.src = e.target.value;
+// });
+
+addImg.addEventListener('');
+addImg.change(function() {
+  alert('ok!');
+})();
 
 function materialSelection(arr) {
   const materialSelect = [];
@@ -40,12 +54,10 @@ productForm[13].addEventListener('click', e => {
   console.log('formData :', formData);
 });
 
-API.getProducts();
-API.getProduct('5dc414260765883178486d79');
-API.getPopular();
+console.log('Products', API.getProducts());
+console.log('Product', API.getProduct('5dc414260765883178486d79'));
+console.log('Popular', API.getPopular());
 
-API.delProduct('5dc42ce1fa38424289fa77e6');
-
-API.getGenderProducts('Женские');
+console.log('API.getGenderProducts() :', API.getGenderProducts('Мужские'));
 
 // console.dir(productForm.querySelector('#wear-image'));
