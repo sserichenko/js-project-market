@@ -1,6 +1,7 @@
 import '../scss/main.scss';
 import './page.scss';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-contacts');
 });
@@ -29,9 +30,10 @@ console.dir(formContent)
 
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
   modal.style.display = "block";
 }
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -52,12 +54,12 @@ window.onclick = function(event) {
 }
 
 input.addEventListener('input', e => {
-  // event.preventDefault();
+  event.preventDefault();
   userRegistration.email = e.target.value
 })
 
 output.addEventListener('input', e => {
-  // event.preventDefault();
+  event.preventDefault();
   if (output.lengths <= 6){
     alert ('enter 7')
 
