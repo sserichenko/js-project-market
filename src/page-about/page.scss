@@ -21,7 +21,7 @@ img {
 .catalog__block {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 132px 0 204px 0;
+  padding: 32px 0 30px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -30,7 +30,7 @@ img {
   max-width: 570px;
   display: flex;
   flex-direction: column;
-  padding: 154px 0 74px 0;
+  padding: 74px 0 74px 0;
 }
 
 .catalog__image {
@@ -45,14 +45,14 @@ img {
   position: absolute;
   left: -250px;
   z-index: 50;
-  width: 470px;
-  height: 507px;
+  width: 450px;
+  height: 450px;
 }
 
 .catalog__overlay {
   position: absolute;
-  width: 470px;
-  height: 507px;
+  width: 450px;
+  height: 450px;
   top: 70px;
   left: -180px;
   transform: translate(-50px, -50px);

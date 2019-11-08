@@ -9,15 +9,11 @@ const description = document.querySelector(".description2");
 const price = document.querySelector(".price2");
 const imgModal = document.querySelector(".img_modal2");
 
-// API.getGenderProducts('Мужские').then(prod => {
-//   const abc = men(prod);
-//   ul.insertAdjacentHTML("afterbegin", abc);
-// });
-
-API.getProducts().then(prod => {
+API.getGenderProducts('Мужские').then(prod => {
+  console.log("prod",prod);
   const abc = men(prod);
   ul.insertAdjacentHTML("afterbegin", abc);
-}); //потом закоментить!
+});
 
 ul.addEventListener("click", e => {
   e.preventDefault();
