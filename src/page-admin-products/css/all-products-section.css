@@ -1,5 +1,6 @@
 .all-products-section {
-  width: 1600px;
+  width: 1300px;
+  margin: 0px auto;
 }
 
 .all-products-section-title {
@@ -10,16 +11,19 @@
 .all-products-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
-  justify-content: space-beetwen;
 }
 
 .one-product-item {
   display: block;
-  width: 300px;
+  width: 250px;
+  background-color: #e6dcdc;
+  margin-bottom: 10px;
 }
 
 .one-product-image {
   display: block;
-  width: 300px;
+  width: 250px;
+  height: 250px;
 }

@@ -37,25 +37,19 @@ const API = {
       },
     })
       .then(res => res.json())
-      .then(data => {
-        return data.product;
-      });
+      .then(data => data.product);
   },
 
   getPopular() {
-    this.getProducts().then(products => {
-      const popularProducts = products.filter(item => item.popular);
-      return popularProducts;
+    return this.getProducts().then(products => {
+      return products.filter(item => item.popular);
     });
   },
 
-getGenderProducts(gender) {
+  getGenderProducts(gender) {
     return this.getProducts().then(products => {
-       return products.filter(item => {
-        return item.gender === gender});
-      });
-
-
+      return products.filter(item => item.gender === gender);
+    });
   },
 
   delProduct(prodId) {
