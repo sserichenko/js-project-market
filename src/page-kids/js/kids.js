@@ -9,8 +9,8 @@ const description = document.querySelector(".description2");
 const price = document.querySelector(".price2");
 const imgModal = document.querySelector(".img_modal2");
 
-API.getGenderProducts('Детские').then(prod => {
-  console.log("prod",prod);
+API.getGenderProducts("Детские").then(prod => {
+  console.log("prod", prod);
   const abc = kids(prod);
   ul.insertAdjacentHTML("afterbegin", abc);
 });
@@ -23,7 +23,7 @@ ul.addEventListener("click", e => {
 
     API.getProduct(`${e.target.id}`).then(prod => {
       const abc = kids(prod);
-      imgModal.src = e.target.dataset.img_modal;
+      imgModal.src = e.target.dataset.image;
       product.textContent = e.target.dataset.product;
       description.textContent = e.target.dataset.description;
       price.textContent = e.target.dataset.price;

@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>About</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="cache-control" content="no-cache"/>
-  <meta http-equiv="pragma" content="no-cache"/>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport"
-  content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/" href="../scss/main.scss">
-</head>
-<body>
-    <%= require('html-loader!../partials/modal.html') %>
-    <%= require('html-loader!../partials/nav.html') %>
+  <head>
+    <title>About</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/" href="../scss/main.scss" />
+  </head>
+  <body>
+    <%= require('html-loader!../partials/modal.html') %> <%=
+    require('html-loader!../partials/nav.html') %>
     <div class="block2">
       <img class="page-kids" src="../img/kids/kids-01.jpg" alt="" />
       <ul class="img_list2"></ul>
       <div id="myModal" class="modal2">
-        <div class="modal-content2">
+        <div class="card2">
           <span class="close2">&times;</span>
-          <div class="card2">
+          <div class="imgWrapper">
             <img class="img_modal2" />
-            <h1 class="product2"></h1>
-            <p class="price2"></p>
-            <p class="description2"></p>
-            <p><button class="btn_card2">Add to Cart</button></p>
           </div>
+          <h1 class="product2"></h1>
+          <p class="price2"></p>
+          <p class="description2"></p>
+          <p><button class="btn_card2">Add to Cart</button></p>
         </div>
       </div>
       <img class="page-kids" src="../img/kids/kids-02.jpg" alt="" />
