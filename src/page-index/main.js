@@ -77,10 +77,10 @@ $(() => {
 });
 
 
-  API.getPopular().then(picArr => {
-    localStorage.setItem("picArr", JSON.stringify(picArr));
-    featuresList.insertAdjacentHTML("afterbegin", list(picArr));
-  })
+API.getPopular().then(picArr => {
+  localStorage.setItem("picArr", JSON.stringify(picArr));
+  featuresList.insertAdjacentHTML("afterbegin", list(picArr));
+})
 
 const addToCart = document.querySelector(".calash");
 const listListener = document.querySelector(".features-list");

@@ -59,9 +59,7 @@ cartRef.addEventListener('click', (e)=>{
 
     localStorage.setItem("good", JSON.stringify(chart));
     renderingGallery(chart);
-
   }
-
 })
 
 
@@ -71,7 +69,6 @@ const renderingGallery = () => {
   if (chart.length > 0) {
     cartUl.innerHTML = "";
     chart.forEach(el => {
-      console.log('elRender', el);
       markup += `
         <li class="cart-item">
           <div class="modal-item">
