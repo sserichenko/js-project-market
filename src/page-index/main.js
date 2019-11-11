@@ -2,6 +2,7 @@ import $ from "jquery";
 import addingToCart from '../jsForChart/addToChart';
 import list from './list.hbs';
 const featuresList = document.querySelector('.features-list');
+import '../js/indexadmin';
 
 import '../scss/main.scss';
 import './page.scss';
