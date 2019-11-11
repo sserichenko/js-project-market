@@ -6,7 +6,6 @@ if (localStorage.getItem("good") !== null) {
 
 export default function(e) {
   const picArr = JSON.parse(localStorage.getItem("picArr"));
-  console.log('picArr :', picArr);
 
   if (e.target.nodeName === "BUTTON") {
     const el = picArr.find(el => el._id === e.target.dataset.id);
@@ -17,7 +16,6 @@ export default function(e) {
       chart = [...chart, el];
       // console.log('chart', chart);
       localStorage.setItem("good", JSON.stringify(chart));
-      console.log("chart3 :", chart);
     }
   }
 }
@@ -62,9 +60,7 @@ cartRef.addEventListener('click', (e)=>{
   }
 })
 
-
 const renderingGallery = () => {
-  console.log('chartGAL', chart)
   let markup = "";
   if (chart.length > 0) {
     cartUl.innerHTML = "";

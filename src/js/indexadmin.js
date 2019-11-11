@@ -14,7 +14,6 @@ const formContent = document.querySelector('.container__form')
 const buttonLogin = document.querySelector('#userRegister')
 const registerButton = document.getElementById("register")
 let userRegistration = {};
-console.dir(formContent)
 
 //  const loginBtn = formContent.querySelector('#userLogin');
 
@@ -59,13 +58,10 @@ output.addEventListener('input', e => {
   alert ('enter 7')
   }else {userRegistration.password = e.target.value}
 })
-console.log(userRegistration);
-console.log(output);
 
 
 buttonLogin.addEventListener('click', e => {
   event.preventDefault();
-  console.log(userRegistration);
 
   fetch('http://localhost:3000/api/auth/signup', {
     method: 'post',
