@@ -2,9 +2,9 @@
   padding: 5px 5px;
   position: fixed;
   border-radius: 10px;
-  top: 116px;
+  top: 70px;
   right: -500px;
-  width: 300px;
+  width: 350px;
   min-height: 50px;
   z-index: 11111;
   background: #d3d3d3;
@@ -14,15 +14,16 @@
 // calc(100% - 116px);
 .modal-cart.show {
   visibility: visible;
-  transform: translateX(-500px);
+  transform: translateX(-510px);
 }
 .modal-cart__title{
   display: inline-block;
   width: 200px;
   font-family: 'Montserat', serif;
-  color: teal;
+  color: #222222;
   font-size: 18px;
   text-transform: uppercase;
+  margin-right: 64px;
 }
 .cart-list{
   list-style: none;
@@ -37,7 +38,8 @@
   border-radius: 4px;
 }
 .cart-item{
-
+  position: relative;
+  padding: 5px 10px;
 }
 .cart-list__img{
   width: 60px;
@@ -69,8 +71,19 @@
   margin-bottom: 3px;
 }
 .del-chart-item{
+  position: absolute;
  width: 20px;
  height: 20px;
  font-size: 10px;
  color: red;
+ right: 10px;
+ top: 5px;
+
+}
+.modal-dialog{
+  overflow-y: initial !important;
+}
+.modal-body{
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
