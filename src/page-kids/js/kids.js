@@ -9,8 +9,8 @@ const description = document.querySelector(".description2");
 const price = document.querySelector(".price2");
 const imgModal = document.querySelector(".img_modal2");
 
-API.getGenderProducts('Детские').then(prod => {
-  console.log("prod",prod);
+API.getGenderProducts("Детские").then(prod => {
+  console.log("prod", prod);
   const abc = kids(prod);
   ul.insertAdjacentHTML("afterbegin", abc);
 });
