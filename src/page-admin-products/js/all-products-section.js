@@ -5,9 +5,14 @@ import API from './api';
 
 const allProductsList = document.querySelector('.all-products-list');
 
-// console.log(templete);
-
 API.getProducts().then(prod => {
   const content = templete(prod);
-  allProductsList.innerHTML = content;
+  allProductsList.insertAdjacentHTML('beforeEnd', content);
+});
+
+allProductsList.addEventListener('click', e => {
+  if (e.target.id === 'deleteBtn') {
+    API.delProduct(e.target.parentElement.id);
+    alert('Product removed successfully!');
+  }
 });

@@ -1,22 +1,24 @@
 import './product-ex';
 import API from './api';
+import templete from '../html/templates/template.hbs';
+const allProductsList = document.querySelector('.all-products-list');
 
 const productForm = document.querySelector('form.new-product');
 const materialBlock = [...productForm.querySelector('#wear-material').children];
 const addImg = document.querySelector('#wear-image');
+const reader = new FileReader();
 const viewImg = document.querySelector('#product-img');
 
 console.dir(addImg);
 
-// addImg.addEventListener('', e => {
-//   console.log('add a photo');
-//   viewImg.src = e.target.value;
-// });
+reader.onload = e => {
+  viewImg.src = e.target.result;
+};
 
-addImg.addEventListener('');
-addImg.change(function() {
-  alert('ok!');
-})();
+addImg.addEventListener('change', e => {
+  const f = e.target.files[0];
+  reader.readAsDataURL(f);
+});
 
 function materialSelection(arr) {
   const materialSelect = [];
@@ -44,20 +46,18 @@ productForm[13].addEventListener('click', e => {
     popular: productForm.querySelector('#wear-popular').checked,
     purchases: 0,
   };
-  document.getElementById('product-management').reset();
 
+  document.getElementById('product-management').reset();
+  viewImg.src = '../../img/no-image-icon.png';
   const formData = new FormData();
   Object.keys(product).forEach(key => {
     formData.append(key, product[key]);
   });
-  API.addNewProduct(formData);
-  console.log('formData :', formData);
+  API.addNewProduct(formData).then(data => {
+    const obj = [data.products[data.products.length - 1]];
+    console.log(obj);
+    const markUp = templete(obj);
+    console.log(markUp);
+    allProductsList.insertAdjacentHTML('afterBegin', markUp);
+  });
 });
-
-console.log('Products', API.getProducts());
-console.log('Product', API.getProduct('5dc414260765883178486d79'));
-console.log('Popular', API.getPopular());
-
-console.log('API.getGenderProducts() :', API.getGenderProducts('Мужские'));
-
-// console.dir(productForm.querySelector('#wear-image'));

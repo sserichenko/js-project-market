@@ -1,8 +1,15 @@
-{{# each this}}
+{{#each this}}
   <li class="one-product-item">
+    <span class="popular-product">Star</span>
     <img src='http://localhost:3000{{image}}' alt='{{type}} {{gender}} {{name}}' class="one-product-image">
     <p class="one-product-fullname">{{brandName}} {{name}}</p>
-    <p class="one-product-size">Размер {{size}}</p>
+    <p class="one-product-size">Размер: {{size}}</p>
     <span class="one-product-id">ID: {{_id}}</span>
+    <div class="hoover-change-product">
+      <div class="change-product-button" id='{{_id}}'>
+        <button class="manage-btn" id="deleteBtn" onClick="window.location.reload()">DEL</button>
+        <button class="manage-btn" id="editBtn">EDITE</button>
+      </div>
+    </div>
   </li>
 {{/each}}

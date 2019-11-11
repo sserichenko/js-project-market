@@ -17,13 +17,55 @@
 
 .one-product-item {
   display: block;
+  position: relative;
   width: 250px;
   background-color: #e6dcdc;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .one-product-image {
   display: block;
   width: 250px;
   height: 250px;
+}
+
+.hoover-change-product {
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.one-product-item:hover .hoover-change-product {
+  visibility: visible;
+}
+
+.popular-product {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  transform: translateX(-100%)
+}
+
+.change-product-button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.manage-btn{
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: green;
+  color: white;
+  margin: 0px auto;
 }
