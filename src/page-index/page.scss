@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-
-
 #container {
   position: relative;
   width: 100vw;
@@ -408,31 +406,53 @@ body {
 
 .new-collection {
   position: relative;
-  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.new-collection__mein-title {
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .new-collection__description {
   position: absolute;
-  left: 640px;
-  top: 300px;
+  left: 620px;
+  top: 60px;
+  max-width: 500px;
 }
 
 .new-collection__title {
-  font-family: 'Times New Roman', serif;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   font-weight: 600;
-  max-width: 500px;
+  color: #222222;
 }
 
 .new-collection__paragraph {
+  margin-bottom: 10px;
   max-width: 500px;
-  font-family: 'Arial', serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.new-collection__more {
+  max-width: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .button-box {
   position: absolute;
-  left: 1100px;
-  top: 400px;
+  left: 620px;
+  top: 416px;
 
   &::before {
     content: '';
@@ -450,17 +470,29 @@ body {
 .view-now {
   border: none;
   position: absolute;
+  text-transform: uppercase;
+  cursor: pointer;
 
   width: 146px;
   height: 48px;
   background-color: #82f4d3;
   border-radius: 4px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.collection {
+  padding-top: 30px;
 }
 
 .collection-title {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .features-list {
@@ -473,56 +505,60 @@ body {
 
 .features-list-item {
   position: relative;
-  margin-bottom: 15px;
-
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: transform 0.2s ease-in, box-shadow 0.3s linear;
 }
 
 .features-list-inner {
   position: absolute;
-  width: 230px;
-  height: 280px;
+  width: 100%;
+  height: 322px;
   left: 50%;
   top: 36%;
   transform: translate(-50%, -50%);
   display: none;
-  background-color: rgba(130, 244, 211, .6);
-
 }
 
 .features-list-item:hover .features-list-inner {
   display: block;
 }
 
+.features-list-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 .features-list-item:hover .calash {
   display: block;
-
 }
 
 .calash {
   position: absolute;
   display: none;
-  width: 168px;
-  height: 50px;
-  left: 35px;
-  top: 110px;
-  border: 1px solid teal;
-  color: #000000;
-  background: none;
+  width: 146px;
+  height: 48px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #222222;
+  text-transform: uppercase;
+  background-color: #82f4d3;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
 }
 
-.calash p {
-  font-size: 14px;
-  display: inline-block;
-  width: 100px;
-  margin: 0;
-  padding: 0;
-  line-height: 50px;
-  text-transform: uppercase;
-  text-align: center;
+.calash:hover {
+  background-color: #222222;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .features-list-item img {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   width: 255px;
   height: 322px;
   object-fit: cover;
@@ -531,7 +567,7 @@ body {
 .goods-box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 26px;
+  margin-bottom: 8px;
 }
 
 .product-name {
@@ -550,6 +586,72 @@ body {
 .price {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+}
+
+
+
+
+.women-collection {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.women-collection__mein-title {
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.women-collection__description {
+  position: absolute;
+  left: 620px;
+  top: 60px;
+  max-width: 500px;
+}
+
+.women-collection__title {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.women-collection__paragraph {
+  margin-bottom: 16px;
+  max-width: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.women-collection__more {
+  max-width: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.women__button-box {
+  position: absolute;
+  left: 308px;
+  top: 565px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 146px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #82f4d3;
+    right: -140px;
+    bottom: -40px;
+    user-select: none;
+  }
 }
 
 //CHART MODAL CSS//
