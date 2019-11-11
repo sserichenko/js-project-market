@@ -1,18 +1,17 @@
 let chart = [];
 if (localStorage.getItem("good") !== null) {
   chart = JSON.parse(localStorage.getItem("good"));
-}
 
-console.log("chart1 :", chart);
-export default function(e, picArr) {
-  // console.log('picArr :', picArr);
+} else localStorage.setItem("good", '');
+
+export default function(e) {
+  const picArr = JSON.parse(localStorage.getItem("picArr"));
+  console.log('picArr :', picArr);
 
   if (e.target.nodeName === "BUTTON") {
-    const el = picArr.find(el => el.id === e.target.dataset.id);
-    console.log("chart2 :", chart);
+    const el = picArr.find(el => el._id === e.target.dataset.id);
 
-    console.log('el :', el);
-    if (chart.find(el => el.id === e.target.dataset.id)) {
+    if (chart.find(el => el._id === e.target.dataset.id)) {
       return; //add function quantity
     } else {
       chart = [...chart, el];
@@ -32,7 +31,7 @@ const body = document.querySelector('body');
 
 
 nav.addEventListener("click", (ev) => {
-  console.log(ev.target)
+
   if(ev.target.nodeName === 'BUTTON' || ev.target.dataset.action === "openChart" ||
  ev.target.dataset.action === "openChartSVG"){
   cartRef.classList.add("show");
@@ -51,13 +50,13 @@ modalCartClose.addEventListener("click", () => {
 cartRef.addEventListener('click', (e)=>{
   if(e.target.nodeName === 'BUTTON' && e.target.dataset.action === "del"){
     const elIndex = chart.find((el, index) => {
-      if (el.id === e.target.id) {
+      if (el._id === e.target.id) {
         return index
       }
     })
-    console.log('chart :', chart);
+
     chart.splice(elIndex, 1);
-    console.log('chart :', chart);
+
     localStorage.setItem("good", JSON.stringify(chart));
     renderingGallery(chart);
 
@@ -67,17 +66,19 @@ cartRef.addEventListener('click', (e)=>{
 
 
 const renderingGallery = () => {
+  console.log('chartGAL', chart)
   let markup = "";
   if (chart.length > 0) {
     cartUl.innerHTML = "";
     chart.forEach(el => {
+      console.log('elRender', el);
       markup += `
         <li class="cart-item">
           <div class="modal-item">
-            <img class="cart-list__img" src="${el.image}">
+            <img class="cart-list__img" src="http://localhost:3000${el.image}">
              <span class="cart-list__name">${el.name}</span>
              <span class="cart-list__price">$${el.price}</span>
-             <button id="${el.id}" data-action="del" class="del-chart-item">x</button>
+             <button id="${el._id}" data-action="del" class="del-chart-item">x</button>
           </div>
         </li>
         `;
