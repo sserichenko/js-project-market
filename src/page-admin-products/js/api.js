@@ -4,7 +4,7 @@ const API = {
   },
 
   addNewProduct(obj) {
-    fetch(this.refs.products, {
+    return fetch(this.refs.products, {
       method: 'POST',
       headers: {
         Authorization:
@@ -23,9 +23,7 @@ const API = {
       },
     })
       .then(res => res.json())
-      .then(data => {
-        return data.products;
-      });
+      .then(data => data.products);
   },
 
   getProduct(prodId) {
