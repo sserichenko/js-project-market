@@ -3,6 +3,7 @@ import './page.scss';
 import addingToCart from '../jsForChart/addToChart';
 import list from './list.hbs';
 const featuresList = document.querySelector('.features-list');
+import '../page-admin-products/js/api';
 
   const markDishes = list(picArr);
   console.log('markDishes', list());
