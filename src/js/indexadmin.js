@@ -58,6 +58,7 @@ output.addEventListener('input', e => {
 
   alert ('enter 7')
   }else {userRegistration.password = e.target.value}
+
 })
 console.log(userRegistration);
 console.log(output);
