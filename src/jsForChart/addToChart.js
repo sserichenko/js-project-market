@@ -32,6 +32,7 @@ const body = document.querySelector('body');
 
 
 nav.addEventListener("click", (ev) => {
+  console.log(ev.target)
   if(ev.target.nodeName === 'BUTTON' || ev.target.dataset.action === "openChart" ||
  ev.target.dataset.action === "openChartSVG"){
   cartRef.classList.add("show");
