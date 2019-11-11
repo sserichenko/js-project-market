@@ -11,6 +11,7 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 /* Modal Content/Box */
 .modal-content2 {
   background-color: #eeeded;
@@ -19,9 +20,11 @@
   border: 1px solid rgb(75, 70, 70);
   width: 80%;
 }
-.img_modal2{
+
+.img_modal2 {
   margin: 0 auto;
 }
+
 /* The Close Button */
 .close2 {
   color: rgb(202, 12, 12);
@@ -29,12 +32,14 @@
   font-size: 100px;
   font-weight: bold;
 }
+
 .close2:hover,
 .close2:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
+
 .card2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 80%;
@@ -42,17 +47,21 @@
   text-align: center;
   font-family: arial;
 }
-.product2{
+
+.product2 {
   margin-bottom: 15px;
 }
-.description2{
+
+.description2 {
   margin-bottom: 15px;
 }
+
 .price2 {
   color: grey;
   font-size: 22px;
   margin-bottom: 15px;
 }
+
 .card2 button {
   border: none;
   outline: 0;
@@ -65,6 +74,7 @@
   font-size: 18px;
   margin-bottom: 15px;
 }
+
 .card2 button:hover {
   opacity: 0.7;
 }
