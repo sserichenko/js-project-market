@@ -1,36 +1,40 @@
 import './product-ex';
 import API from './api';
+import templete from '../html/templates/template.hbs';
 
+const allProductsList = document.querySelector('.all-products-list');
 const productForm = document.querySelector('form.new-product');
 const materialBlock = [...productForm.querySelector('#wear-material').children];
 const addImg = document.querySelector('#wear-image');
 const viewImg = document.querySelector('#product-img');
+const prodManageBtn = document.querySelector('button[type="submit"]');
+const formData = new FormData();
+const reader = new FileReader();
 
-console.dir(addImg);
+reader.onload = e => {
+  viewImg.src = e.target.result;
+};
 
-// addImg.addEventListener('', e => {
-//   console.log('add a photo');
-//   viewImg.src = e.target.value;
-// });
+addImg.addEventListener('change', e => {
+  const f = e.target.files[0];
+  reader.readAsDataURL(f);
+});
 
-addImg.addEventListener('');
-addImg.change(function() {
-  alert('ok!');
-})();
-
-function materialSelection(arr) {
-  const materialSelect = [];
-  arr.forEach(obj => {
-    if (obj.checked) {
-      materialSelect.push(obj.value);
-    }
-  });
-  return materialSelect;
-}
-
-productForm[13].addEventListener('click', e => {
+prodManageBtn.addEventListener('click', e => {
   e.preventDefault();
-  const product = {
+  if (prodManageBtn.textContent === 'Добавить') {
+    const product = formParser();
+
+    formReset();
+    exportImg(product);
+    API.addNewProduct(formData).then(data => {
+      showNewProduct(data);
+    });
+  }
+});
+
+function formParser() {
+  return {
     type: productForm.querySelector('#wear-type').value,
     gender: productForm.querySelector('#wear-applicability').value,
     material: materialSelection(materialBlock),
@@ -44,20 +48,32 @@ productForm[13].addEventListener('click', e => {
     popular: productForm.querySelector('#wear-popular').checked,
     purchases: 0,
   };
-  document.getElementById('product-management').reset();
+}
 
-  const formData = new FormData();
-  Object.keys(product).forEach(key => {
-    formData.append(key, product[key]);
+function materialSelection(arr) {
+  const materialSelect = [];
+  arr.forEach(obj => {
+    if (obj.checked) {
+      materialSelect.push(obj.value);
+    }
   });
-  API.addNewProduct(formData);
-  console.log('formData :', formData);
-});
+  return materialSelect;
+}
 
-console.log('Products', API.getProducts());
-console.log('Product', API.getProduct('5dc414260765883178486d79'));
-console.log('Popular', API.getPopular());
+function formReset() {
+  document.getElementById('product-management').reset();
+  viewImg.src = '../../img/no-image-icon.png';
+}
 
-console.log('API.getGenderProducts() :', API.getGenderProducts('Мужские'));
+function exportImg(obj) {
+  Object.keys(obj).forEach(key => {
+    formData.append(key, obj[key]);
+  });
+}
 
-// console.dir(productForm.querySelector('#wear-image'));
+function showNewProduct(arr) {
+  const lastProduct = [arr.products[arr.products.length - 1]];
+  const markUp = templete(lastProduct);
+  allProductsList.insertAdjacentHTML('afterBegin', markUp);
+  alert('Product added successfully!');
+}
