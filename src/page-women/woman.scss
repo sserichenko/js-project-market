@@ -16,11 +16,11 @@
 }
 
 .banner-men {
-  background-image: url(../img/men/banner-men.jpg);
+  background-image: url(../img/men/men-banner.jpg);
 }
 
 .banner-women {
-  background-image: url(../img/men/banner-men.jpg);
+  background-image: url(../img/women/women-banner.jpg);
 }
 
 .banner-kids {
@@ -48,17 +48,19 @@
   margin-bottom: 20px;
   padding: 10px;
   transition: transform 0.2s ease-in, box-shadow 0.3s linear;
+  border-radius: 10px;
 }
 
 .gallery__item2:hover {
   transform: scale(1.05);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.9), 0 10px 10px rgba(0, 0, 0, 0.9);
 }
 
 .gallery__img2 {
   width: 255px;
   height: 322px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .img_list2 {
