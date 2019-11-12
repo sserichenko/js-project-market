@@ -30,18 +30,19 @@
       />
       <ul class="img_list2 container"></ul>
       <div id="myModal" class="modal2">
-        <div class="modal-content2">
+        <div class="card2">
           <span class="close2">&times;</span>
-          <div class="card2">
+          <div class="imgWrapper">
             <img class="img_modal2" />
-            <h1 class="product2"></h1>
-            <p class="price2"></p>
-            <p class="description2"></p>
-            <p><button class="btn_card2">Add to Cart</button></p>
           </div>
+          <h1 class="product2"></h1>
+          <p class="price2"></p>
+          <p class="description2"></p>
+          <p><button class="btn_card2">Add to Cart</button></p>
         </div>
       </div>
     </div>
+    <%= require('html-loader!../partials/cart.html') %>
     <%= require('html-loader!../partials/footer.html') %>
   </body>
 </html>

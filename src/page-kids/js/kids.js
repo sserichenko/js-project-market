@@ -23,7 +23,7 @@ ul.addEventListener("click", e => {
 
     API.getProduct(`${e.target.id}`).then(prod => {
       const abc = kids(prod);
-      imgModal.src = e.target.dataset.img_modal;
+      imgModal.src = e.target.dataset.image;
       product.textContent = e.target.dataset.product;
       description.textContent = e.target.dataset.description;
       price.textContent = e.target.dataset.price;
