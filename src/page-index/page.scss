@@ -392,7 +392,6 @@ body {
   flex-direction: column;
 }
 
-
 .clearfix::after {
   display: table;
   content: "";
@@ -400,12 +399,13 @@ body {
 }
 
 .main-collection {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 
 .new-collection {
   position: relative;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -422,7 +422,7 @@ body {
 .new-collection__description {
   position: absolute;
   left: 620px;
-  top: 60px;
+  top: 80px;
   max-width: 500px;
 }
 
@@ -452,7 +452,7 @@ body {
 .button-box {
   position: absolute;
   left: 620px;
-  top: 416px;
+  top: 430px;
 
   &::before {
     content: '';
@@ -472,7 +472,6 @@ body {
   position: absolute;
   text-transform: uppercase;
   cursor: pointer;
-
   width: 146px;
   height: 48px;
   background-color: #82f4d3;
@@ -496,6 +495,7 @@ body {
 }
 
 .features-list {
+  padding-bottom: 20px;
   justify-content: space-around;
   list-style: none;
   display: flex;
@@ -588,11 +588,9 @@ body {
   font-weight: 600;
 }
 
-
-
-
 .women-collection {
   position: relative;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -653,5 +651,3 @@ body {
     user-select: none;
   }
 }
-
-//CHART MODAL CSS//

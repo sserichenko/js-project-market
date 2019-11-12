@@ -20,14 +20,15 @@
   <body>
     <%= require('html-loader!../partials/modal.html') %> <%=
     require('html-loader!../partials/nav.html') %>
-    <div class="block2">
-      <img
-        class="page-men"
-        src="../img/men/men-01.jpeg"
-        alt=""
-        width="1600"
-        height="1236"
-      />
+    <img
+      class="page-men"
+      src="../img/men/men-01.jpeg"
+      alt=""
+      width="1600"
+      height="1236"
+    />
+
+    <div class="block2 banner-men">
       <ul class="img_list2 container"></ul>
       <div id="myModal" class="modal2">
         <div class="card2">
@@ -42,7 +43,7 @@
         </div>
       </div>
     </div>
-    <%= require('html-loader!../partials/cart.html') %>
-    <%= require('html-loader!../partials/footer.html') %>
+    <%= require('html-loader!../partials/cart.html') %> <%=
+    require('html-loader!../partials/footer.html') %>
   </body>
 </html>

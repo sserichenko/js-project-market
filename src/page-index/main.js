@@ -6,6 +6,7 @@ import "../js/indexadmin";
 import "../scss/main.scss";
 import "./page.scss";
 import API from "../page-admin-products/js/api";
+import "../partials/footer";
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded", "page-index");
@@ -76,11 +77,10 @@ $(() => {
   });
 });
 
-
-  API.getPopular().then(picArr => {
-    localStorage.setItem("picArr", JSON.stringify(picArr));
-    featuresList.insertAdjacentHTML("afterbegin", list(picArr));
-  })
+API.getPopular().then(picArr => {
+  localStorage.setItem("picArr", JSON.stringify(picArr));
+  featuresList.insertAdjacentHTML("afterbegin", list(picArr));
+});
 
 const addToCart = document.querySelector(".calash");
 const listListener = document.querySelector(".features-list");
