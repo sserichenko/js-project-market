@@ -1,8 +1,9 @@
+import "../js/is-autorization";
 import $ from "jquery";
 import "slick-carousel";
 import "slick-carousel/slick/slick.scss";
 import "../scss/main.scss";
 import "./page.scss";
-import '../js/indexadmin';
+import "../js/indexadmin";
 $(".slider__bottom--center").slick();
-import '../jsForChart/addToChart';
+import "../jsForChart/addToChart";

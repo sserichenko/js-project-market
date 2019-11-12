@@ -2,13 +2,13 @@ const API = {
   refs: {
     products: "http://localhost:3000/api/products/"
   },
+  token: localStorage.getItem("token"),
 
   addNewProduct(obj) {
     return fetch(this.refs.products, {
       method: "POST",
       headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYzJhNjMyOWQ0ZDU2ODM5MDJlM2E2ZCIsImlhdCI6MTU3MzA0ODQzOCwiZXhwIjoxNTczNjUzMjM4fQ.oIVNWXUo7GwiDt2o1xXf4r1wqffjEUyBerjZF6b_F-k"
+        Authorization: `Bearer ${this.token}`
       },
       body: obj
     }).then(res => res.json());
@@ -54,8 +54,7 @@ const API = {
     return fetch(this.refs.products + prodId, {
       method: "DELETE",
       headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYzJhNjMyOWQ0ZDU2ODM5MDJlM2E2ZCIsImlhdCI6MTU3MzA0ODQzOCwiZXhwIjoxNTczNjUzMjM4fQ.oIVNWXUo7GwiDt2o1xXf4r1wqffjEUyBerjZF6b_F-k"
+        Authorization: `Bearer ${this.token}`
       }
     })
       .then(res => res.json())
@@ -66,8 +65,7 @@ const API = {
     return fetch(this.refs.products + prodId, {
       method: "PUT",
       headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYzJhNjMyOWQ0ZDU2ODM5MDJlM2E2ZCIsImlhdCI6MTU3MzA0ODQzOCwiZXhwIjoxNTczNjUzMjM4fQ.oIVNWXUo7GwiDt2o1xXf4r1wqffjEUyBerjZF6b_F-k",
+        Authorization: `Bearer ${this.token}`,
         "content-type": "application/json"
       },
       body: JSON.stringify(obj)

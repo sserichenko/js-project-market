@@ -1,3 +1,4 @@
+import "../js/is-autorization";
 import $ from "jquery";
 import addingToCart from "../jsForChart/addToChart";
 import list from "./list.hbs";
@@ -76,11 +77,10 @@ $(() => {
   });
 });
 
-
-  API.getPopular().then(picArr => {
-    localStorage.setItem("picArr", JSON.stringify(picArr));
-    featuresList.insertAdjacentHTML("afterbegin", list(picArr));
-  })
+API.getPopular().then(picArr => {
+  localStorage.setItem("picArr", JSON.stringify(picArr));
+  featuresList.insertAdjacentHTML("afterbegin", list(picArr));
+});
 
 const addToCart = document.querySelector(".calash");
 const listListener = document.querySelector(".features-list");

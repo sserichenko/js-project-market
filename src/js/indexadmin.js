@@ -42,7 +42,6 @@ window.onclick = function(event) {
 cancelButton.onclick = function(event) {
   if (event.target === cancelButton) {
     modal.style.display = "none";
-    localStorage.removeItem("token");
   }
 };
 
@@ -103,13 +102,12 @@ buttonLogin.addEventListener("click", e => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("data", data.token);
-        console.log(localStorage.getItem("token"));
+        //add token to localstorage. Don't delete
         if (localStorage.getItem("token")) {
           return;
         } else {
-          console.log("дошли до записи");
           localStorage.setItem("token", data.token);
+          document.location.href = "admin-products.html";
         }
       });
   });

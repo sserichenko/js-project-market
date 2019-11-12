@@ -28,12 +28,13 @@ allProductsList.addEventListener("click", e => {
       console.log(data);
       fillForm(data);
       prodManageBtn.addEventListener("click", e => {
-        e.preventDefault();
         const change = changedProduct();
         console.log("отправка", id, change);
         API.changeProduct(id, change).catch(err => {
           console.log(err);
         });
+        formReset();
+        document.location.href = "admin-products.html";
       });
     });
   }
@@ -87,4 +88,9 @@ function materialSelection(arr) {
     }
   });
   return materialSelect;
+}
+
+function formReset() {
+  document.getElementById("product-management").reset();
+  viewImg.src = "../../img/no-image-icon.png";
 }
