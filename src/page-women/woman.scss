@@ -15,6 +15,10 @@
   background-repeat: no-repeat;
 }
 
+.men-field{
+  padding-bottom: 300px;
+}
+
 .banner-men {
   background-image: url(../img/men/men-banner.jpg);
 }
@@ -71,6 +75,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.men-field{
+  padding-bottom: 450px;
 }
 
 .imgWrapper {
