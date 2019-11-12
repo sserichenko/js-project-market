@@ -49,13 +49,12 @@ function fillForm(obj) {
   productForm.querySelector("#wear-price").value = obj.price;
   productForm.querySelector("#wear-availability").value = obj.availability;
   productForm.querySelector("#wear-popular").checked = obj.popular;
-  // productForm.querySelector('#wear-image').value = `${obj.image}`;
   viewImg.src = `http://localhost:3000${obj.image}`;
   setMaterials(obj.material, materialBlock);
 }
 
 function setMaterials(arrMaterials, arrCheckbox) {
-  console.log(arrMaterials);
+  // console.log(arrMaterials);
   arrMaterials.forEach(material => {
     arrCheckbox.forEach(el => {
       if (el.value === material) {

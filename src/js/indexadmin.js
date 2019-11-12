@@ -42,13 +42,13 @@ window.onclick = function(event) {
 cancelButton.onclick = function(event) {
   if (event.target === cancelButton) {
     modal.style.display = "none";
+    localStorage.removeItem("token");
   }
 };
 
 input.addEventListener("input", e => {
   // event.preventDefault();
-  userRegistration.email = e.target.value
-
+  userRegistration.email = e.target.value;
 });
 
 // input.addEventListener((inputOur) {
@@ -61,7 +61,7 @@ output.addEventListener("input", e => {
   // if (output.lengths <= 6) {
   //   alert("enter 7");
   // } else {
-    userRegistration.password = e.target.value;
+  userRegistration.password = e.target.value;
   // }
 });
 console.log(userRegistration);
@@ -102,6 +102,15 @@ buttonLogin.addEventListener("click", e => {
       body: JSON.stringify(userRegistration)
     })
       .then(res => res.json())
-      .then(data => console.log("data", data));
+      .then(data => {
+        console.log("data", data.token);
+        console.log(localStorage.getItem("token"));
+        if (localStorage.getItem("token")) {
+          return;
+        } else {
+          console.log("дошли до записи");
+          localStorage.setItem("token", data.token);
+        }
+      });
   });
 });
