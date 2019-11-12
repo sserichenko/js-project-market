@@ -5,6 +5,7 @@ import "../js/indexadmin";
 import "../scss/main.scss";
 import "./page.scss";
 import API from "../page-admin-products/js/api";
+import "../partials/footer";
 
 // --------------------Slider-------------------------------------
 
@@ -77,7 +78,7 @@ listListener.addEventListener("click", e => addingToCart(e));
 let chart = [];
 if (localStorage.getItem("good") !== null) {
   chart = JSON.parse(localStorage.getItem("good"));
-} else localStorage.setItem("good", chart);
+}
 
 function addingToCart(e) {
   let picArr = JSON.parse(newPicArr);

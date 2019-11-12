@@ -2,7 +2,6 @@ import woman from "../templates/woman.hbs";
 import API from "../../page-admin-products/js/api";
 // import  '../../jsForChart/addToChart';
 
-
 const ul = document.querySelector(".img_list2");
 const modal = document.querySelector("#myModal");
 const close = document.querySelector(".close2");
@@ -12,29 +11,29 @@ const price = document.querySelector(".price2");
 const imgModal = document.querySelector(".img_modal2");
 const cartUl = document.querySelector(".cart-list");
 const cartRef = document.querySelector(".modal-cart");
-const nav = document.querySelector('.nav');
+const nav = document.querySelector(".nav");
 const modalCartClose = document.querySelector(".modal-cart__close");
 
-
-
-nav.addEventListener("click", (ev) => {
-
-  if(ev.target.nodeName === 'BUTTON' || ev.target.dataset.action === "openChart" ||
- ev.target.dataset.action === "openChartSVG"){
-  cartRef.classList.add("show");
-  renderingGallery(chart);
+nav.addEventListener("click", ev => {
+  if (
+    ev.target.nodeName === "BUTTON" ||
+    ev.target.dataset.action === "openChart" ||
+    ev.target.dataset.action === "openChartSVG"
+  ) {
+    cartRef.classList.add("show");
+    renderingGallery(chart);
   }
 });
 
-let chart = []
+let chart = [];
 if (localStorage.getItem("good") !== null) {
   chart = JSON.parse(localStorage.getItem("good"));
-} else localStorage.setItem("good", newProd);
+}
 
-console.log('chart', chart)
+console.log("chart", chart);
 
-function renderingGallery () {
-  console.log('render')
+function renderingGallery() {
+  console.log("render");
   let markup = "";
   if (chart.length > 0) {
     cartUl.innerHTML = "";
@@ -52,13 +51,10 @@ function renderingGallery () {
     });
   }
   cartUl.innerHTML = markup;
-};
+}
 renderingGallery(chart);
 
 let newProd = [];
-
-
-
 
 API.getGenderProducts("Женские").then(prod => {
   const abc = woman(prod);
@@ -67,7 +63,7 @@ API.getGenderProducts("Женские").then(prod => {
 });
 
 ul.addEventListener("click", e => {
-  console.log('e.target.id', e.target.id)
+  console.log("e.target.id", e.target.id);
 
   if (e.target.nodeName === "IMG") {
     modal.style.display = "block";
@@ -90,19 +86,18 @@ window.addEventListener("click", function(event) {
   }
 });
 
-const modal2 = document.querySelector('.modal2')
-const btn_card2 = modal2.querySelector('.btn_card2')
+const modal2 = document.querySelector(".modal2");
+const btn_card2 = modal2.querySelector(".btn_card2");
 
 function addingToCartFromModal(e) {
-  console.log('add00')
-  const img_modal2 = document.querySelector('.img_modal2');
+  console.log("add00");
+  const img_modal2 = document.querySelector(".img_modal2");
 
   let picArr = JSON.parse(newProd);
   // let chart2 = JSON.parse(localStorage.getItem("good"));
   // let chart2 = chart
-// console.log('chart2', chart2)
+  // console.log('chart2', chart2)
   if (e.target.nodeName === "BUTTON") {
-
     const el = picArr.find(el => el._id == img_modal2.dataset.action);
 
     if (chart.find(el => el._id == img_modal2.dataset.action)) {
@@ -115,26 +110,23 @@ function addingToCartFromModal(e) {
   }
 }
 
-modal2.addEventListener('click', e => addingToCartFromModal(e));
+modal2.addEventListener("click", e => addingToCartFromModal(e));
 
-
-cartRef.addEventListener('click', (e)=>{
-  if(e.target.nodeName === 'BUTTON' && e.target.dataset.action === "del"){
+cartRef.addEventListener("click", e => {
+  if (e.target.nodeName === "BUTTON" && e.target.dataset.action === "del") {
     const elIndex = chart.find((el, index) => {
       if (el._id === e.target.id) {
-        return index
+        return index;
       }
-    })
+    });
 
     chart.splice(elIndex, 1);
 
     localStorage.setItem("good", JSON.stringify(chart));
     renderingGallery(chart);
   }
-})
+});
 
 modalCartClose.addEventListener("click", () => {
   cartRef.classList.remove("show");
 });
-
-
