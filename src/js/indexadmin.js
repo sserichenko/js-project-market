@@ -23,7 +23,9 @@ let userRegistration = {};
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-  modal.style.display = "block";
+  if ((btn.textContent = "Log in")) {
+    modal.style.display = "block";
+  }
 };
 
 // When the user clicks on <span> (x), close the modal
@@ -68,7 +70,6 @@ output.addEventListener("input", e => {
 });
 console.log(userRegistration);
 console.log(output);
-
 
 buttonLogin.addEventListener("click", e => {
   event.preventDefault();

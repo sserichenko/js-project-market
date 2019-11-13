@@ -66,16 +66,10 @@ $(() => {
   });
 });
 
-<<<<<<< HEAD
-API.getPopular().then(picArr => {
-  localStorage.setItem("picArr", JSON.stringify(picArr));
-  featuresList.insertAdjacentHTML("afterbegin", list(picArr));
-=======
 let newPicArr = [];
 API.getPopular().then(picArr => {
   featuresList.insertAdjacentHTML("afterbegin", list(picArr));
   newPicArr = JSON.stringify(picArr);
->>>>>>> dev
 });
 
 const addToCart = document.querySelector(".calash");

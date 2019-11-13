@@ -11,10 +11,12 @@ isAuthorization();
 function isAuthorization() {
   if (localStorage.getItem("token")) {
     checkToken();
-    loginButton.addEventListener("click", () => {
-      localStorage.removeItem("token");
-      document.location.href = "index.html";
-    });
+    if ((loginButton.textContent = "Log Out")) {
+      loginButton.addEventListener("click", () => {
+        localStorage.removeItem("token");
+        document.location.href = "index.html";
+      });
+    }
   }
 }
 
