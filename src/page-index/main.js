@@ -1,3 +1,4 @@
+import "../js/is-autorization";
 import $ from "jquery";
 import list from "./list.hbs";
 const featuresList = document.querySelector(".features-list");

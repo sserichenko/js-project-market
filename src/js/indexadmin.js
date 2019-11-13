@@ -23,7 +23,9 @@ let userRegistration = {};
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-  modal.style.display = "block";
+  if ((btn.textContent = "Log in")) {
+    modal.style.display = "block";
+  }
 };
 
 // When the user clicks on <span> (x), close the modal
@@ -46,8 +48,7 @@ cancelButton.onclick = function(event) {
 
 input.addEventListener("input", e => {
   // event.preventDefault();
-  userRegistration.email = e.target.value
-
+  userRegistration.email = e.target.value;
 });
 
 // input.addEventListener((inputOur) {
@@ -64,12 +65,11 @@ output.addEventListener("input", e => {
   // if (output.lengths <= 6) {
   //   alert("enter 7");
   // } else {
-    userRegistration.password = e.target.value;
+  userRegistration.password = e.target.value;
   // }
 });
 console.log(userRegistration);
 console.log(output);
-
 
 buttonLogin.addEventListener("click", e => {
   event.preventDefault();
@@ -105,6 +105,14 @@ buttonLogin.addEventListener("click", e => {
       body: JSON.stringify(userRegistration)
     })
       .then(res => res.json())
-      .then(data => console.log("data", data));
+      .then(data => {
+        //add token to localstorage. Don't delete
+        if (localStorage.getItem("token")) {
+          return;
+        } else {
+          localStorage.setItem("token", data.token);
+          document.location.href = "admin-products.html";
+        }
+      });
   });
 });

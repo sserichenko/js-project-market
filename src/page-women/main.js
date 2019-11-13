@@ -1,5 +1,5 @@
+import "../js/is-autorization";
 import "./woman.scss";
 import "../scss/main.scss";
-import "./js/woman";
 import "../js/indexadmin";
-import "../partials/footer";
+import "./js/woman";
