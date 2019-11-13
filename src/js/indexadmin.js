@@ -16,7 +16,6 @@ const buttonLogin = document.querySelector("#userRegister");
 const registerButton = document.getElementById("register");
 const userLogin = document.getElementById("userLogin");
 let userRegistration = {};
-console.dir(formContent);
 
 //  const loginBtn = formContent.querySelector('#userLogin');
 
@@ -55,6 +54,10 @@ input.addEventListener("input", e => {
 //   return re.test(String(inputOur).toLowerCase())
 // })
 
+//   alert ('enter 7')
+//   }else {userRegistration.password = e.target.value}
+// })
+
 output.addEventListener("input", e => {
   // event.preventDefault();
   // if (output.lengths <= 6) {
@@ -66,9 +69,9 @@ output.addEventListener("input", e => {
 console.log(userRegistration);
 console.log(output);
 
+
 buttonLogin.addEventListener("click", e => {
   event.preventDefault();
-  console.log(userRegistration);
 
   fetch("http://localhost:3000/api/auth/signup", {
     method: "post",

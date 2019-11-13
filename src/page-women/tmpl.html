@@ -20,9 +20,9 @@
   <body>
     <%= require('html-loader!../partials/modal.html') %> <%=
     require('html-loader!../partials/nav.html') %>
-    <div class="block2">
-      <img class="page-women" src="../img/women/women-01.jpeg" alt="" />
-      <ul class="img_list2"></ul>
+    <img class="page-women" src="../img/women/women-01.jpeg" alt="" />
+    <div class="block2 banner-women">
+      <ul class="img_list2 container"></ul>
       <div id="myModal" class="modal2">
         <div class="card2">
           <span class="close2">&times;</span>
@@ -32,11 +32,11 @@
           <h1 class="product2"></h1>
           <p class="price2"></p>
           <p class="description2"></p>
-          <p><button class="btn_card2">Add to Cart</button></p>
+         <button class="btn_card2">Add to Cart</button>
         </div>
       </div>
     </div>
-    <%= require('html-loader!../partials/cart.html') %>
-    <%= require('html-loader!../partials/footer.html') %>
+    <%= require('html-loader!../partials/cart.html') %> <%=
+    require('html-loader!../partials/footer.html') %>
   </body>
 </html>

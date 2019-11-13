@@ -21,9 +21,9 @@
   <body>
     <%= require('html-loader!../partials/modal.html') %> <%=
     require('html-loader!../partials/nav.html') %>
-    <div class="block2">
-      <img class="page-kids" src="../img/kids/kids-01.jpg" alt="" />
-      <ul class="img_list2"></ul>
+    <img class="page-kids" src="../img/kids/kids-01.jpg" alt="" />
+    <div class="block2 banner-kids">
+      <ul class="img_list2 container"></ul>
       <div id="myModal" class="modal2">
         <div class="card2">
           <span class="close2">&times;</span>
@@ -38,7 +38,7 @@
       </div>
       <img class="page-kids" src="../img/kids/kids-02.jpg" alt="" />
     </div>
-    <%= require('html-loader!../partials/cart.html') %>
-    <%= require('html-loader!../partials/footer.html') %>
+    <%= require('html-loader!../partials/cart.html') %> <%=
+    require('html-loader!../partials/footer.html') %>
   </body>
 </html>

@@ -7,3 +7,4 @@ import "./page.scss";
 import "../js/indexadmin";
 $(".slider__bottom--center").slick();
 import "../jsForChart/addToChart";
+import "../partials/footer";
