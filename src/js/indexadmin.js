@@ -1,5 +1,11 @@
 import { nbind } from "q";
 
+const server = window.location.origin;
+const serverURL =
+      window.location.hostname.indexOf('localhost') !== -1
+        ? 'https://nike-market.herokuapp.com'
+        : server;
+
 // Get the modal
 const modal = document.getElementById("isModal");
 
@@ -74,7 +80,7 @@ console.log(output);
 buttonLogin.addEventListener("click", e => {
   event.preventDefault();
 
-  fetch("http://localhost:3000/api/auth/signup", {
+  fetch(`${serverURL}/api/auth/signup`, {
     method: "post",
     headers: {
       "content-type": "application/json",
@@ -95,7 +101,7 @@ buttonLogin.addEventListener("click", e => {
     modal.style.display = "none";
     output.value = "";
     input.value = "";
-    fetch("http://localhost:3000/api/auth/signin", {
+    fetch(`${serverURL}/api/auth/signin`, {
       method: "post",
       headers: {
         "content-type": "application/json",
