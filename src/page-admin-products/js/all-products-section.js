@@ -50,7 +50,7 @@ function fillForm(obj) {
   productForm.querySelector("#wear-price").value = obj.price;
   productForm.querySelector("#wear-availability").value = obj.availability;
   productForm.querySelector("#wear-popular").checked = obj.popular;
-  viewImg.src = `http://localhost:3000${obj.image}`;
+  viewImg.src = `https://nike-market.herokuapp.com${obj.image}`;
   setMaterials(obj.material, materialBlock);
 }
 

@@ -1,6 +1,12 @@
+const server = window.location.origin;
+const serverURL =
+      window.location.hostname.indexOf('localhost') !== -1
+        ? 'https://nike-market.herokuapp.com'
+        : server;
+
 const API = {
   refs: {
-    products: "http://localhost:3000/api/products/"
+    products: `${serverURL}/api/products/`
   },
   token: localStorage.getItem("token"),
 

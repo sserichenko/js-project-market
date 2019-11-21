@@ -126,7 +126,7 @@ function renderingGallery() {
       markup += `
         <li class="cart-item">
           <div class="modal-item">
-            <img class="cart-list__img" src="http://localhost:3000${el.image}">
+            <img class="cart-list__img" src="https://nike-market.herokuapp.com${el.image}">
              <span class="cart-list__name">${el.name}</span>
              <span class="cart-list__price">$${el.price}</span>
              <button id="${el._id}" data-action="del" class="del-chart-item">x</button>

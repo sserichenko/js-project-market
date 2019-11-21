@@ -1,3 +1,9 @@
+const server = window.location.origin;
+const serverURL =
+      window.location.hostname.indexOf('localhost') !== -1
+        ? 'https://nike-market.herokuapp.com'
+        : server;
+
 const navigationLinks = document.querySelector("#insert-before");
 const loginButton = document.querySelector("#myBtn");
 const linkProductAdmin = `
@@ -23,7 +29,7 @@ function isAuthorization() {
 function checkToken() {
   const token = localStorage.getItem("token");
 
-  fetch("http://localhost:3000/api/auth/current", {
+  fetch(`${serverURL}/api/auth/current`, {
     method: "GET",
     headers: {
       "content-type": "application/json",
